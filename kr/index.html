@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20120%20120%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20rx%3D%2224%22%20fill%3D%22%2315171A%22/%3E%3Cg%20transform%3D%22translate%2815%200%29%22%3E%3Cdefs%3E%3CclipPath%20id%3D%22fz%22%3E%3Cpath%20d%3D%22M10%2010h70v16h-52v26h44v16h-44v42h-18z%22/%3E%3C/clipPath%3E%3C/defs%3E%3Cg%20clip-path%3D%22url%28%23fz%29%22%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%224.0%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%221.0%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%2214.2%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%220.5%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%2224.4%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%221.0%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%2234.7%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%220.5%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%2244.9%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%221.0%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%2255.1%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%220.5%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%2265.3%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%221.0%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%2275.6%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%220.5%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%2285.8%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%221.0%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%2296.0%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%220.5%22/%3E%3C/g%3E%3Cpath%20d%3D%22M10%2010h70v16h-52v26h44v16h-44v42h-18z%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%221.4%22/%3E%3C/g%3E%3C/svg%3E">
+<title>Fanaai — 만드는 비용은 사라진다. 가치는 사람에게 남는다.</title>
+<link rel="alternate" hreflang="en" href="https://fana.club/">
+<link rel="alternate" hreflang="ko" href="https://fana.club/kr/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#15171A; --bg-2:#1C1F23; --ink:#F3EFE6; --ink-2:#B9B3A6; --ink-3:#766F63;
+  --gold:#B8975A; --gold-soft:rgba(184,151,90,.35); --line:rgba(243,239,230,.12);
+  --paper:#F3EFE6; --paper-ink:#15171A; --paper-ink-2:#4E4A43; --paper-line:rgba(21,23,26,.14);
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ color-scheme:dark; } }
+:root[data-theme="dark"]{ color-scheme:dark; }
+html{scroll-padding-top:calc(64px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:'Noto Sans KR','Apple SD Gothic Neo',system-ui,sans-serif;font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;word-break:keep-all}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:inherit;text-decoration:none}
+.serif{font-family:'Noto Serif KR','Apple Myungjo',Georgia,serif}
+.mono{font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;letter-spacing:.04em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:rgba(21,23,26,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.mark{display:flex;align-items:center;gap:10px;color:var(--ink)}
+.mark .lg{width:40px;height:28px}
+.mark .wm{font-size:20px;font-weight:500;letter-spacing:-0.01em;text-transform:none}
+.langs{display:flex;gap:10px;margin-left:18px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em}
+.langs a{color:var(--ink-3)}
+.langs a.on{color:var(--gold)}
+nav{display:flex;gap:28px}
+nav a{font-size:13px;color:var(--ink-2);padding:8px 0;border-bottom:1px solid transparent}
+nav a:hover{color:var(--ink);border-bottom-color:var(--gold)}
+
+.hero{padding:160px 0 120px;position:relative;min-height:78vh;display:flex;align-items:center}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+.hero .cat{font-size:14px;color:var(--gold);margin:0 0 28px}
+.hero h1{margin:0;font-weight:500;font-size:clamp(34px,4.6vw,60px);line-height:1.14;letter-spacing:-0.025em}
+.hero h1 span{display:block}
+.hero .sub{margin:36px 0 0;max-width:640px;font-size:18px;color:var(--ink-2)}
+.hero .rule{height:1px;background:linear-gradient(90deg,var(--gold),transparent 70%);margin:44px 0 0}
+
+.tracklist{padding:0 0 96px}
+.tracklist ol{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.tracklist li{display:grid;grid-template-columns:120px minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr) 110px;gap:24px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line)}
+.tracklist li a{display:contents}
+.tracklist .no{font-size:14px;color:var(--gold)}
+.tracklist .name{font-family:'Noto Sans KR',sans-serif;font-size:24px;font-weight:700;letter-spacing:-0.02em}
+.tracklist .meta{font-size:17px;color:var(--ink-2)}
+.tracklist .st{font-size:14px;color:var(--ink-3);text-align:right}
+.tracklist li.open .name{color:var(--ink-2)}
+.tracklist li.open .st{color:var(--gold)}
+.tracklist li:hover .name{color:var(--ink)}
+
+section.sec{padding:88px 0 0}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:40px}
+.sec-head h2{margin:0;font-weight:500;font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink)}
+.sec-head p{margin:0;font-size:14px;color:var(--ink-3)}
+
+.release{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center;padding:0 0 72px}
+.release:nth-child(even) .cover{order:2}
+.cover{position:relative;aspect-ratio:1/1;background:var(--bg-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.cover::before{content:"";position:absolute;inset:14px;border:1px solid var(--gold-soft);pointer-events:none}
+.cover .big{position:absolute;font-size:clamp(72px,10vw,150px);font-weight:400;color:var(--gold);letter-spacing:-0.02em;opacity:.95;animation:none;text-shadow:0 0 40px rgba(21,23,26,.9)}
+@keyframes float{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-52%) scale(1.03)}}
+.cover .ph{display:none}
+.release .no{font-size:14px;color:var(--gold);margin:0 0 14px}
+.release h3{margin:0 0 14px;font-family:'Noto Sans KR',sans-serif;font-weight:700;font-size:34px;line-height:1.15;letter-spacing:-0.02em}
+.release .desc{margin:0 0 24px;font-size:17px;line-height:1.75;color:var(--ink-2);max-width:460px}
+.credits{display:grid;grid-template-columns:110px 1fr;gap:8px 16px;font-size:14px;max-width:460px}
+.credits dt{color:var(--ink-3)}
+.credits dd{margin:0;color:var(--ink)}
+.credits dd.gold{color:var(--gold)}
+.release.open .cover{background:transparent;border-style:dashed}
+.release.open .cover .big{color:var(--ink-3);opacity:.5}
+.release.open h3{color:var(--ink-2)}
+
+.platform{padding-bottom:16px}
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.strip a{display:flex;flex-direction:column;gap:10px}
+.strip .sq{position:relative;aspect-ratio:3/4;background:var(--bg-2);border:1px solid var(--line);display:flex;align-items:flex-end;padding:14px}
+.strip .sq::before{content:"";position:absolute;inset:10px;border:1px solid var(--gold-soft)}
+.strip .sq span{font-size:13px;color:var(--ink-3)}
+.strip .sq b{position:relative;font-family:"Noto Serif KR",serif;font-weight:500;font-size:clamp(22px,2.4vw,30px);line-height:1.1;color:var(--ink);align-self:flex-start;margin-right:auto}
+.strip .sq{flex-direction:column;align-items:stretch;justify-content:space-between;padding:22px}
+.strip .sq span{position:relative}
+
+.strip .t{font-size:18px;font-weight:500}
+.strip .m{font-size:14px;color:var(--ink-3)}
+
+.paper{background:var(--paper);color:var(--paper-ink);margin-top:96px;padding:96px 0}
+.paper .sec-head{border-bottom-color:var(--paper-line)}
+.paper .sec-head h2{color:var(--paper-ink)}
+.paper .sec-head p{color:var(--paper-ink-2)}
+.state{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px}
+.state h3{margin:0 0 12px;font-weight:500;font-size:28px;line-height:1.2;letter-spacing:-0.02em}
+.state p{margin:0;font-size:15px;color:var(--paper-ink-2)}
+.state .n{display:block;font-size:12px;color:var(--gold);margin-bottom:18px}
+.label-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;margin-top:88px;padding-top:48px;border-top:1px solid var(--paper-line)}
+.label-row h3{margin:0 0 10px;font-weight:500;font-size:22px}
+.label-row p{margin:0;font-size:17px;color:var(--paper-ink-2)}
+.label-row .ten{font-size:64px;font-weight:400;line-height:1;color:var(--gold);margin:0 0 8px}
+
+.cta{padding:112px 0 88px;text-align:center}
+.cta .cat{font-size:14px;color:var(--gold);margin:0 0 24px}
+.cta h2{margin:0;font-weight:500;font-size:clamp(36px,5.4vw,72px);line-height:1.08;letter-spacing:-0.03em}
+.cta p{margin:24px auto 0;max-width:640px;color:var(--ink-2);font-size:17px;line-height:1.75}
+.cta a.mail{display:inline-block;margin-top:48px;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);padding:16px 28px;border:1px solid var(--gold);transition:background .2s,color .2s}
+.cta a.mail:hover{background:var(--gold);color:var(--paper-ink)}
+
+footer{border-top:1px solid var(--line);padding:28px 0 40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13.5px;color:var(--ink-3)}
+
+@media (max-width:860px){
+  .hero{padding:96px 0 72px;min-height:auto}
+  .hero .vinyl{left:20vw;width:160vw;opacity:.3}
+  .tracklist li{grid-template-columns:80px 1fr 90px;gap:14px}
+  .tracklist .meta:nth-of-type(2){display:none}
+  .tracklist .meta{grid-column:2;font-size:13px}
+  .release{grid-template-columns:1fr;gap:28px;padding-bottom:64px}
+  .release:nth-child(even) .cover{order:0}
+  .state,.label-row{grid-template-columns:1fr;gap:32px}
+  nav{gap:16px}
+  nav a:nth-child(n+4){display:none}
+}
+
+.hero{overflow:hidden}
+.hero .vinyl{position:absolute;left:38vw;top:50%;width:110vw;max-width:none;aspect-ratio:1;transform:translateY(-50%);opacity:.45;pointer-events:none}
+.hero .vinyl svg{width:100%;height:100%;display:block;animation:spin 48s linear infinite;transform-origin:50% 50%}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.hero .vinyl svg,.cta .disc svg{animation:none}}
+.hero .wrap{position:relative;z-index:1;width:100%}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.07;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");mix-blend-mode:overlay}
+main{position:relative;z-index:1}
+.cta{position:relative;overflow:hidden}
+.cta .disc{position:absolute;left:50%;top:50%;width:min(140vw,1400px);aspect-ratio:1;transform:translate(-50%,-50%);opacity:.22;pointer-events:none}
+.cta .disc svg{width:100%;height:100%;display:block;animation:spin 90s linear infinite reverse;transform-origin:50% 50%}
+.cta .wrap{position:relative;z-index:1}
+.cover .art{position:absolute;inset:0;pointer-events:none;opacity:.7}
+.cover .art svg{width:100%;height:100%;display:block}
+.cover .code{position:absolute;top:18px;left:22px;opacity:.95}
+.cover .big{position:relative}
+
+.thesis{margin-top:88px;padding-top:48px;border-top:1px solid var(--paper-line)}
+.thesis .n,.how .n{display:block;font-size:12px;color:var(--gold);margin:0 0 18px;letter-spacing:.18em}
+.thesis h3{margin:0 0 18px;font-weight:500;font-size:clamp(28px,3.6vw,44px);line-height:1.15;letter-spacing:-0.025em;max-width:900px}
+.thesis p{margin:0;font-size:16px;color:var(--paper-ink-2);max-width:760px}
+.how{margin-top:72px}
+.how ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;border-top:1px solid var(--paper-line)}
+.how li{display:flex;flex-direction:column;gap:10px;padding-top:22px}
+.how li>span.mono{font-size:14px;color:var(--gold)}
+.how li b{font-weight:500;font-size:22px;line-height:1.2}
+.how li>span:last-child{font-size:16px;color:var(--paper-ink-2)}
+@media (max-width:860px){.how ol{grid-template-columns:1fr 1fr}}
+
+.statement{padding:88px 0 0}
+.statement .lines{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;border-top:1px solid var(--line);padding-top:40px}
+.statement .n{display:block;font-size:14px;color:var(--gold);margin-bottom:16px;letter-spacing:.18em}
+.statement h3{margin:0 0 12px;font-weight:500;font-size:26px;line-height:1.25;letter-spacing:-0.02em}
+.statement p{margin:0;font-size:17px;line-height:1.75;color:var(--ink-2)}
+.hyp{margin-top:88px;padding:56px 0 0;border-top:1px solid var(--line)}
+.hyp .n{display:block;font-size:12px;color:var(--gold);margin-bottom:22px;letter-spacing:.18em}
+.hyp h2{margin:0 0 24px;font-weight:500;font-size:clamp(34px,5.4vw,72px);line-height:1.04;letter-spacing:-0.035em;max-width:1000px}
+.hyp .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;max-width:1000px}
+.hyp .cols b{display:block;font-weight:500;color:var(--gold);font-size:13px;letter-spacing:.14em;margin-bottom:8px}
+.hyp .cols p{margin:0;font-size:15px;color:var(--ink-2)}
+@media (max-width:860px){.statement .lines,.hyp .cols{grid-template-columns:1fr;gap:28px}}
+
+.hero .sub2{margin:28px 0 0;max-width:640px;font-size:18px;line-height:1.75;color:var(--ink-2)}
+.hero h1 span{display:block}
+.doors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;max-width:960px;margin:48px auto 0;text-align:left;border-top:1px solid var(--line);padding-top:28px}
+.doors div{display:flex;flex-direction:column;gap:6px}
+.doors b{font-weight:500;font-size:22px}
+.doors span{font-size:17px;line-height:1.7;color:var(--ink-2)}
+@media (max-width:860px){.doors{grid-template-columns:1fr}}
+
+.big-h{margin:0 0 36px;font-weight:500;font-size:clamp(28px,3.2vw,42px);line-height:1.2;letter-spacing:-0.02em}
+.statement .lines{border-top:0;padding-top:0}
+.ic{width:72px;height:72px;margin:0 0 18px}
+.ic svg{width:100%;height:100%;display:block}
+.hyp h2{max-width:1100px}
+
+.ic{width:100%;height:320px;margin:0 0 26px;display:flex;align-items:center;justify-content:center}
+.ic svg{width:100%;height:100%}
+.statement .lines>div{border:1px solid var(--line);border-radius:22px;background:var(--bg-2);padding:34px 34px 38px}
+.ic .r1{animation:ring 4s ease-in-out infinite}
+.ic .r2{animation:ring 4s ease-in-out infinite .6s}
+.ic .r3{animation:ring 4s ease-in-out infinite 1.2s}
+@keyframes ring{0%,100%{transform:scale(1);transform-origin:60px 60px}50%{transform:scale(.72);transform-origin:60px 60px}}
+.ic .pth{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 5s ease-in-out infinite}
+@keyframes draw{0%{stroke-dashoffset:1}55%{stroke-dashoffset:0}85%{stroke-dashoffset:0}100%{stroke-dashoffset:1}}
+.ic .dot{animation:blink 5s ease-in-out infinite}
+@keyframes blink{0%,50%{opacity:0}60%,85%{opacity:1}100%{opacity:0}}
+.ic .bigb{animation:fade 6s ease-in-out infinite}
+@keyframes fade{0%,100%{opacity:.4}50%{opacity:.12}}
+.ic .smb,.ic .smf{animation:grow 6s ease-in-out infinite;transform-origin:93px 98px}
+@keyframes grow{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
+.bet-sub{margin:18px 0 0;font-size:17px;line-height:1.75;color:var(--ink-2);max-width:760px}
+.cover .px{opacity:.25;animation:px 3s steps(1) infinite}
+@keyframes px{0%,70%{opacity:.25}71%,100%{opacity:.9}}
+.cover .dp{animation:dp 2.4s steps(1) infinite}
+@keyframes dp{0%{x:128px;y:210px}25%{x:128px;y:176px}50%{x:128px;y:244px}75%{x:94px;y:210px}100%{x:162px;y:210px}}
+.cover .bt{animation:pulse 2.4s ease-in-out infinite}
+.cover .bt2{animation:pulse 2.4s ease-in-out infinite 1.2s}
+@keyframes pulse{0%,100%{stroke-width:1.4}50%{stroke-width:3.2}}
+.cover .wave{opacity:0;animation:wave 6.3s linear infinite;transform-origin:110px 290px}
+@keyframes wave{0%{opacity:0;transform:scale(.6)}15%{opacity:.9}100%{opacity:0;transform:scale(1.25)}}
+.cover .tgt{animation:pulse 3s ease-in-out infinite}
+.cover .fr{fill-opacity:0;animation:fr 4s ease-in-out infinite}
+@keyframes fr{0%,100%{fill-opacity:0;opacity:.5}50%{fill-opacity:.22;opacity:1}}
+.cover .pg{animation:blink2 3.9s ease-in-out infinite}
+@keyframes blink2{0%,100%{opacity:.35}33%{opacity:1}}
+.cover .sb{fill-opacity:0;opacity:.5;animation:sb 4.5s ease-in-out infinite}
+@keyframes sb{0%,100%{fill-opacity:0;opacity:.5}50%{fill-opacity:.25;opacity:1}}
+.cover .clap{opacity:.25;animation:clap 1.05s steps(1) infinite}
+@keyframes clap{0%,45%{opacity:.25}50%,100%{opacity:.9}}
+@media (prefers-reduced-motion:reduce){.ic *,.cover *{animation:none!important}}
+
+.gives{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;border-top:1px solid var(--paper-line);padding-top:28px}
+.gives div{display:flex;flex-direction:column;gap:10px}
+.gives div>span.mono{font-size:14px;color:var(--gold);letter-spacing:.14em}
+.gives b{font-weight:500;font-size:26px;line-height:1.25}
+.gives div>span:last-child{font-size:17px;line-height:1.75;color:var(--paper-ink-2)}
+.ten-row{display:grid;grid-template-columns:160px 1fr;gap:28px;align-items:center;margin-top:64px;padding-top:36px;border-top:1px solid var(--paper-line)}
+.ten-row p{margin:0;font-size:17px;line-height:1.75;color:var(--paper-ink-2);max-width:620px}
+.ten-row .ten{font-size:72px;line-height:1;color:var(--gold)}
+.paper .big-h{color:var(--paper-ink)}
+@media (max-width:860px){.gives{grid-template-columns:1fr 1fr}.ten-row{grid-template-columns:1fr}}
+
+.formula{margin:0 0 56px}
+.formula h2{margin:0 0 16px;font-weight:500;font-size:clamp(28px,3.2vw,42px);line-height:1.2;letter-spacing:-0.02em;max-width:1000px}
+.label-row p b{font-weight:500;color:var(--paper-ink)}
+
+.cover .beam{animation:beam 6s ease-in-out infinite;transform-origin:200px 40px}
+@keyframes beam{0%,100%{transform:rotate(-6deg);opacity:.06}50%{transform:rotate(6deg);opacity:.14}}
+.cover .spot{animation:pulse2 3s ease-in-out infinite}
+@keyframes pulse2{0%,100%{r:7}50%{r:11}}
+.cover .row{opacity:.25;animation:rowon 4s ease-in-out infinite}
+@keyframes rowon{0%,100%{opacity:.25}50%{opacity:.9}}
+
+.cover .scan{opacity:.15;animation:scan 3.5s ease-in-out infinite}
+@keyframes scan{0%,100%{opacity:.15}50%{opacity:.6}}
+.cover .play{animation:pulse3 2.6s ease-in-out infinite;transform-origin:204px 200px}
+@keyframes pulse3{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.15);opacity:1}}
+.cover .eq{animation:eq 1.3s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes eq{0%,100%{transform:scaleY(.5)}50%{transform:scaleY(1.6)}}
+
+.cover .spA{animation:spA 1s steps(1) infinite}
+.cover .spB{animation:spB 1s steps(1) infinite}
+@keyframes spA{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes spB{0%,49%{opacity:0}50%,100%{opacity:1}}
+.cover .bullet{animation:bullet 1.6s linear infinite}
+@keyframes bullet{0%{transform:translateY(0);opacity:1}90%{transform:translateY(-200px);opacity:1}100%{opacity:0}}
+.cover .dp{animation:dp2 2.4s steps(1) infinite}
+@keyframes dp2{0%{x:58px;y:282px}25%{x:58px;y:256px}50%{x:58px;y:308px}75%{x:32px;y:282px}100%{x:84px;y:282px}}
+
+.cover .cardL{transform-origin:134px 280px;animation:fanL 6s ease-in-out infinite}
+.cover .cardR{transform-origin:266px 280px;animation:fanR 6s ease-in-out infinite}
+@keyframes fanL{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-5deg)}}
+@keyframes fanR{0%,100%{transform:rotate(0deg)}50%{transform:rotate(5deg)}}
+.cover .cardM{animation:floatM 4s ease-in-out infinite}
+@keyframes floatM{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.cover .spark{animation:spark 3s ease-in-out infinite}
+@keyframes spark{0%,100%{opacity:.1}50%{opacity:1}}
+
+.statement .lines>div{border:1px solid var(--line);border-radius:22px;background:var(--bg-2);padding:34px 34px 38px}
+.rv{opacity:0;transform:translateY(90px);transition:opacity .7s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:translateY(0)}
+.lines .rv:nth-child(2){transition-delay:.18s}
+.lines .rv:nth-child(3){transition-delay:.36s}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+.folder{display:flex;flex-direction:column;gap:14px}
+.tabs{display:flex;gap:8px}
+.tabs button{all:unset;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.08em;color:var(--ink-3);padding:10px 16px;border:1px solid var(--line);border-bottom:none;border-radius:10px 10px 0 0;background:var(--bg-2)}
+.tabs button.active{color:var(--gold);border-color:var(--gold-soft);background:var(--bg-2)}
+.stack{position:relative;perspective:1400px}
+.fcard{display:grid;grid-template-columns:300px 1fr;gap:36px;align-items:center;border:1px solid var(--line);border-radius:0 22px 22px 22px;background:var(--bg-2);padding:34px 40px;cursor:pointer;transition:transform .7s cubic-bezier(.2,.7,.2,1),opacity .5s ease;transform-origin:top center}
+.fcard:not(.active){position:absolute;inset:0;pointer-events:none;opacity:.35;transform:translateY(calc(-14px * var(--k, 1))) scale(calc(1 - .03 * var(--k, 1)))}
+.fcard.active{position:relative;z-index:3;opacity:1;transform:none}
+.fcard.leaving{opacity:0;transform:translateY(60px) rotateX(-12deg)}
+.fcard .ic{width:100%;height:240px;margin:0}
+.ftext{display:flex;flex-direction:column}
+.ftext .n{margin-bottom:10px}
+.hint{font-size:12px;color:var(--ink-3);letter-spacing:.12em;margin:0}
+.lines{display:none}
+@media (max-width:860px){.fcard{grid-template-columns:1fr;gap:16px}.fcard .ic{height:180px}}
+
+.brows{display:flex;flex-direction:column}
+.brow{display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:center;padding:44px 0;border-top:1px solid var(--line)}
+.brow:last-child{border-bottom:1px solid var(--line)}
+.brow .ic{width:100%;height:200px;margin:0}
+.btext{display:flex;flex-direction:column;max-width:820px}
+.btext .n{margin-bottom:8px}
+.folder,.tabs,.stack,.hint{display:none}
+@media (max-width:860px){.brow{grid-template-columns:1fr;gap:16px}.brow .ic{height:150px}}
+
+.brows{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;border-top:1px solid var(--line);padding-top:36px}
+.brow{display:flex;flex-direction:column;gap:18px;padding:0;border:0}
+.brow:last-child{border:0}
+.brow .ic{width:100%;height:170px;margin:0;justify-content:flex-start}
+.brow .ic svg{width:auto;height:100%}
+.btext{max-width:none}
+.btext p{font-size:16.5px;line-height:1.7}
+@media (max-width:860px){.brows{grid-template-columns:1fr;gap:28px}.brow .ic{height:140px}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top"><svg class="lg" viewBox="0 0 172 120" aria-hidden="true"><defs><clipPath id="hdrfn"><path d="M10 10h70v16h-52v26h44v16h-44v42h-18z"/><path d="M92 10h16l38 62v-62h16v100h-16l-38-62v62h-16z"/></clipPath></defs><g clip-path="url(#hdrfn)"><circle cx="96" cy="60" r="4.0" fill="none" stroke="#B8975A" stroke-width="3" opacity="1.0"/><circle cx="96" cy="60" r="17.3" fill="none" stroke="#B8975A" stroke-width="3" opacity="0.5"/><circle cx="96" cy="60" r="30.5" fill="none" stroke="#B8975A" stroke-width="3" opacity="1.0"/><circle cx="96" cy="60" r="43.8" fill="none" stroke="#B8975A" stroke-width="3" opacity="0.5"/><circle cx="96" cy="60" r="57.1" fill="none" stroke="#B8975A" stroke-width="3" opacity="1.0"/><circle cx="96" cy="60" r="70.4" fill="none" stroke="#B8975A" stroke-width="3" opacity="0.5"/><circle cx="96" cy="60" r="83.6" fill="none" stroke="#B8975A" stroke-width="3" opacity="1.0"/><circle cx="96" cy="60" r="96.9" fill="none" stroke="#B8975A" stroke-width="3" opacity="0.5"/><circle cx="96" cy="60" r="110.2" fill="none" stroke="#B8975A" stroke-width="3" opacity="1.0"/><circle cx="96" cy="60" r="123.5" fill="none" stroke="#B8975A" stroke-width="3" opacity="0.5"/><circle cx="96" cy="60" r="136.7" fill="none" stroke="#B8975A" stroke-width="3" opacity="1.0"/><circle cx="96" cy="60" r="150.0" fill="none" stroke="#B8975A" stroke-width="3" opacity="0.5"/></g><path d="M10 10h70v16h-52v26h44v16h-44v42h-18z" fill="none" stroke="#B8975A" stroke-width="1.4"/><path d="M92 10h16l38 62v-62h16v100h-16l-38-62v62h-16z" fill="none" stroke="#B8975A" stroke-width="1.4"/></svg><span class="wm serif">Fanaai</span></a>
+    <nav aria-label="Primary">
+      <a href="#beliefs">Beliefs</a>
+      <a href="#releases">Labels</a>
+      <a href="#catalog">Catalog</a>
+      <a href="#label">House</a>
+      <a href="#contact">Next</a>
+      <span class="langs"><a class="on" href="/kr/">KO</a><a href="/">EN</a></span>
+    </nav>
+  </div>
+</header>
+
+<div class="grain" aria-hidden="true"></div>
+<main id="top">
+
+  <section class="hero">
+    <div class="vinyl"><svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="500" cy="500" r="190.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="194.8" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="199.5" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="204.3" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="209.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="213.8" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="218.6" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="223.3" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="228.1" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="232.9" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="237.6" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="242.4" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="247.1" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="251.9" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="256.7" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="261.4" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="266.2" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="271.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="275.7" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="280.5" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="285.2" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="290.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="294.8" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="299.5" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="304.3" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="309.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="313.8" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="318.6" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="323.3" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="328.1" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="332.9" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="337.6" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="342.4" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="347.1" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="351.9" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="356.7" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="361.4" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="366.2" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="371.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="375.7" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="380.5" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="385.2" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="390.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="394.8" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="399.5" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="404.3" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="409.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="413.8" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="418.6" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="423.3" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="428.1" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="432.9" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="437.6" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="442.4" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="447.1" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="451.9" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="456.7" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="461.4" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="466.2" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="471.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="475.7" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="480.5" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="485.2" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="490.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="180" fill="none" stroke="#B8975A" stroke-width="1"/><circle cx="500" cy="500" r="8" fill="#B8975A"/><text x="500" y="470" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="18" fill="#B8975A" letter-spacing="4">FANAAI</text><text x="500" y="548" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#B8975A" letter-spacing="3">A LABEL · SIDE A · 33⅓</text></svg></div>
+    <div class="wrap">
+      <div>
+        <p class="cat mono">FANAAI · A HOUSE OF LABELS · EST. 2026</p>
+        <h1 class="serif"><span>만드는 비용은</span><span>사라진다.</span><span style="color:var(--gold)">가치는 사람에게 남는다.</span></h1>
+        <p class="sub2">Fanaai는 하나의 틀로 여러 레이블을 세운다.<br>AI로 만들어, 끝까지 이끌 사람의 이름으로 낸다.<br>하나하나가 그 자체로 완성된 회사가 되도록.</p>
+        <div class="rule" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="statement" id="beliefs">
+    <div class="wrap">
+      <div class="sec-head"><h2 class="mono">Beliefs</h2><p class="mono">우리가 믿는 것</p></div>
+      <h2 class="serif big-h">누구나 만들 수 있다.<br>문제는 누가 성장하는가다.</h2>
+      <div class="brows">
+        <div class="brow"><div class="ic"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="r1" cx="60" cy="60" r="48" fill="none" stroke="#B8975A" stroke-width="1" opacity=".3"/><circle class="r2" cx="60" cy="60" r="32" fill="none" stroke="#B8975A" stroke-width="1" opacity=".55"/><circle class="r3" cx="60" cy="60" r="16" fill="none" stroke="#B8975A" stroke-width="1.2"/><circle cx="60" cy="60" r="2.5" fill="#B8975A"/></svg></div><div class="btext"><span class="n mono">I</span><h3 class="serif">만드는 비용은 사라진다.</h3><p>소프트웨어도, 드라마도, 광고도 한 사람이 몇 주 안에 완성한다. 제작은 누구에게나 열렸고, 그래서 더는 우위가 되지 못한다. 남은 자원은 하나, 얼마나 많이 시도할 수 있는가.</p></div></div>
+        <div class="brow"><div class="ic"><svg viewBox="0 0 120 120" aria-hidden="true"><path class="pth" d="M12 94 C 40 94, 44 30, 70 30 S 100 94, 108 26" fill="none" stroke="#B8975A" stroke-width="1.3" pathLength="1"/><circle class="dot" cx="108" cy="26" r="3.2" fill="#B8975A"/><line x1="12" y1="102" x2="108" y2="102" stroke="#B8975A" stroke-width=".8" opacity=".35"/></svg></div><div class="btext"><span class="n mono">II</span><h3 class="serif">병목은 성장으로 옮겨갔다.</h3><p>만들어진 것은 넘쳐난다. 멈추는 지점은 사람을 불러오고, 머물게 하여 값을 치르게 하는 일이다. AI는 제작의 문을 열었을 뿐, 성장의 문은 여전히 사람의 판단 앞에 있다.</p></div></div>
+        <div class="brow"><div class="ic"><svg viewBox="0 0 120 120" aria-hidden="true"><rect class="bigb" x="14" y="22" width="54" height="76" fill="none" stroke="#B8975A" stroke-width="1" opacity=".4"/><rect class="smb" x="76" y="50" width="34" height="48" fill="none" stroke="#B8975A" stroke-width="1.4"/><rect class="smf" x="83" y="58" width="20" height="32" fill="#B8975A" opacity=".3"/></svg></div><div class="btext"><span class="n mono">III</span><h3 class="serif">규모는 더 이상 승리를 보장하지 않는다.</h3><p>규모가 주던 제작력은 개인에게 내려왔고, 조직에 남은 것은 느림이다. 작은 회사가 열 번 시도하는 동안 큰 회사는 한 번 결재를 받는다. 그러므로 하나에 묶이는 것은 손실이다.</p></div></div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tracklist" id="releases" style="padding-top:96px">
+    <div class="wrap">
+      <div class="sec-head"><h2 class="mono">Labels</h2><p class="mono">하나의 하우스, 각자의 회사</p></div>
+      <div class="formula"><h2 class="serif">한 사람이 한 회사가 된다.<br>회사들의 가치를 서로 곱한다.</h2><p class="bet-sub">만드는 레이블(Contents), 무대가 되는 레이블(Platform), 키우는 레이블(Growth). 레이블마다 하나의 역할을 맡고, 하우스는 그 고리를 잇는다.</p></div>
+      <ol>
+        <li><a href="#r255"><span class="no mono">FN-255</span><span class="name serif">Clay Legends</span><span class="meta">캐주얼 게임 · IP</span><span class="meta mono">CONTENTS · PLATFORM</span><span class="st mono">2026.11 · LIVE</span></a></li>
+        <li><a href="#r334"><span class="no mono">FN-334</span><span class="name serif">Auxomate</span><span class="meta">AI 드리븐 마케팅</span><span class="meta mono">GROWTH</span><span class="st mono">2026.09 · LIVE</span></a></li>
+        <li><a href="#r453"><span class="no mono">FN-453</span><span class="name serif">Aiya</span><span class="meta">AI 숏폼 웹드라마 플랫폼</span><span class="meta mono">PLATFORM</span><span class="st mono">2026 · SOON</span></a></li>
+        <li><a href="#rNNN"><span class="no mono">FN-NNN</span><span class="name serif">ZeroAct</span><span class="meta">웹드라마 제작 · IP</span><span class="meta mono">CONTENTS</span><span class="st mono">2027 · SOON</span></a></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="catalog">
+    <div class="wrap">
+      <div class="sec-head"><h2 class="mono">Catalog</h2><p class="mono">레이블 하나하나가 증명하는 것</p></div>
+      <article class="release" id="r255">
+        <div class="cover"><div class="art"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g class="cardL"><rect x="78" y="112" width="112" height="168" rx="10" fill="#1C1F23" stroke="#B8975A" stroke-width="1.1" opacity=".8" transform="rotate(-12 134 196)"/><g transform="translate(134 200) scale(0.8)" opacity="0.55"><circle cx="0" cy="-10" r="34" fill="#B8975A" fill-opacity=".14" stroke="#B8975A" stroke-width="1.4"/><circle cx="-24" cy="-40" r="12" fill="#B8975A" fill-opacity=".14" stroke="#B8975A" stroke-width="1.2"/><circle cx="24" cy="-40" r="12" fill="#B8975A" fill-opacity=".14" stroke="#B8975A" stroke-width="1.2"/><circle cx="-11" cy="-14" r="3.2" fill="#B8975A"/><circle cx="11" cy="-14" r="3.2" fill="#B8975A"/><path d="M-9 2 Q0 9 9 2" fill="none" stroke="#B8975A" stroke-width="1.6" stroke-linecap="round"/><path d="M-30 30 Q0 14 30 30 L26 60 L-26 60 Z" fill="#B8975A" fill-opacity=".1" stroke="#B8975A" stroke-width="1.3"/></g></g><g class="cardR"><rect x="210" y="112" width="112" height="168" rx="10" fill="#1C1F23" stroke="#B8975A" stroke-width="1.1" opacity=".8" transform="rotate(12 266 196)"/><g transform="translate(266 200) scale(0.8)" opacity="0.55"><circle cx="0" cy="-10" r="34" fill="#B8975A" fill-opacity=".14" stroke="#B8975A" stroke-width="1.4"/><circle cx="-24" cy="-40" r="12" fill="#B8975A" fill-opacity=".14" stroke="#B8975A" stroke-width="1.2"/><circle cx="24" cy="-40" r="12" fill="#B8975A" fill-opacity=".14" stroke="#B8975A" stroke-width="1.2"/><circle cx="-11" cy="-14" r="3.2" fill="#B8975A"/><circle cx="11" cy="-14" r="3.2" fill="#B8975A"/><path d="M-9 2 Q0 9 9 2" fill="none" stroke="#B8975A" stroke-width="1.6" stroke-linecap="round"/><path d="M-30 30 Q0 14 30 30 L26 60 L-26 60 Z" fill="#B8975A" fill-opacity=".1" stroke="#B8975A" stroke-width="1.3"/></g></g><g class="cardM"><rect x="144" y="96" width="112" height="176" rx="10" fill="#1C1F23" stroke="#B8975A" stroke-width="1.6"/><rect x="152" y="104" width="96" height="160" rx="6" fill="none" stroke="#B8975A" stroke-width=".6" opacity=".5"/><g transform="translate(200 190) scale(1)" opacity="1"><circle cx="0" cy="-10" r="34" fill="#B8975A" fill-opacity=".14" stroke="#B8975A" stroke-width="1.4"/><circle cx="-24" cy="-40" r="12" fill="#B8975A" fill-opacity=".14" stroke="#B8975A" stroke-width="1.2"/><circle cx="24" cy="-40" r="12" fill="#B8975A" fill-opacity=".14" stroke="#B8975A" stroke-width="1.2"/><circle cx="-11" cy="-14" r="3.2" fill="#B8975A"/><circle cx="11" cy="-14" r="3.2" fill="#B8975A"/><path d="M-9 2 Q0 9 9 2" fill="none" stroke="#B8975A" stroke-width="1.6" stroke-linecap="round"/><path d="M-30 30 Q0 14 30 30 L26 60 L-26 60 Z" fill="#B8975A" fill-opacity=".1" stroke="#B8975A" stroke-width="1.3"/></g><text x="200" y="258" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="2" fill="#B8975A">CLAY LEGENDS</text></g><circle class="spark" style="animation-delay:0.0s" cx="90" cy="70" r="2" fill="#B8975A"/><circle class="spark" style="animation-delay:0.6s" cx="145" cy="84" r="2" fill="#B8975A"/><circle class="spark" style="animation-delay:1.2s" cx="200" cy="70" r="2" fill="#B8975A"/><circle class="spark" style="animation-delay:1.8s" cx="255" cy="84" r="2" fill="#B8975A"/><circle class="spark" style="animation-delay:2.4s" cx="310" cy="70" r="2" fill="#B8975A"/><text x="200" y="330" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="4" fill="#B8975A" opacity=".7">CHARACTER · IP</text></svg></div><span class="big serif" style="left:22px;bottom:18px;transform:none">255</span><span class="code"><svg viewBox="0 0 212 160" style="width:84px;height:63px" aria-hidden="true"><rect x="1" y="1" width="210" height="158" fill="none" stroke="#B8975A" stroke-width="2"/><rect x="8" y="8" width="196" height="144" fill="none" stroke="#B8975A" stroke-width=".8" opacity=".5"/><g transform="translate(20 14)"><defs><clipPath id="st255"><path d="M10 10h70v16h-52v26h44v16h-44v42h-18z"/><path d="M92 10h16l38 62v-62h16v100h-16l-38-62v62h-16z"/></clipPath></defs><g clip-path="url(#st255)"><circle cx="96" cy="60" r="4.0" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="20.2" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="96" cy="60" r="36.4" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="52.7" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="96" cy="60" r="68.9" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="85.1" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="96" cy="60" r="101.3" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="117.6" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="96" cy="60" r="133.8" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="150.0" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/></g><path d="M10 10h70v16h-52v26h44v16h-44v42h-18z" fill="none" stroke="#B8975A" stroke-width="1.8"/><path d="M92 10h16l38 62v-62h16v100h-16l-38-62v62h-16z" fill="none" stroke="#B8975A" stroke-width="1.8"/></g><text x="106" y="148" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="15" fill="#B8975A" letter-spacing="4">FN · 255</text></svg></span></div>
+        <div>
+          <p class="no mono">FN-255 · CONTENTS · PLATFORM</p>
+          <h3 class="serif">Clay Legends</h3>
+          <p class="desc">캐주얼 게임에서 시작해 캐릭터 IP로 자란다. 작은 게임 하나가 제 이름으로 서고, 그 캐릭터가 다음 작품으로 이어지는가. 이 하우스의 첫 번째 플레이.</p>
+          <dl class="credits mono"><dt>발매</dt><dd>2026.11</dd><dt>역할</dt><dd>Contents · Platform · 게임 · IP</dd><dt>상태</dt><dd class="gold">LIVE</dd></dl>
+        </div>
+      </article>
+      <article class="release" id="r334">
+        <div class="cover"><div class="art"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle class="wave" style="animation-delay:0.0s" cx="110" cy="290" r="40" fill="none" stroke="#B8975A" stroke-width="1.4"/><circle class="wave" style="animation-delay:0.7s" cx="110" cy="290" r="70" fill="none" stroke="#B8975A" stroke-width="0.8"/><circle class="wave" style="animation-delay:1.4s" cx="110" cy="290" r="100" fill="none" stroke="#B8975A" stroke-width="1.4"/><circle class="wave" style="animation-delay:2.1s" cx="110" cy="290" r="130" fill="none" stroke="#B8975A" stroke-width="0.8"/><circle class="wave" style="animation-delay:2.8s" cx="110" cy="290" r="160" fill="none" stroke="#B8975A" stroke-width="1.4"/><circle class="wave" style="animation-delay:3.5s" cx="110" cy="290" r="190" fill="none" stroke="#B8975A" stroke-width="0.8"/><circle class="wave" style="animation-delay:4.2s" cx="110" cy="290" r="220" fill="none" stroke="#B8975A" stroke-width="1.4"/><circle class="wave" style="animation-delay:4.9s" cx="110" cy="290" r="250" fill="none" stroke="#B8975A" stroke-width="0.8"/><circle class="wave" style="animation-delay:5.6s" cx="110" cy="290" r="280" fill="none" stroke="#B8975A" stroke-width="1.4"/><circle cx="110" cy="290" r="5" fill="#B8975A"/><line x1="110" y1="290" x2="330" y2="90" stroke="#B8975A" stroke-width="1" stroke-dasharray="2 6" opacity=".7"/><circle class="tgt" cx="330" cy="90" r="4" fill="none" stroke="#B8975A" stroke-width="1.5"/></svg></div><span class="big serif" style="left:22px;bottom:18px;transform:none">334</span><span class="code"><svg viewBox="0 0 212 160" style="width:84px;height:63px" aria-hidden="true"><rect x="1" y="1" width="210" height="158" fill="none" stroke="#B8975A" stroke-width="2"/><rect x="8" y="8" width="196" height="144" fill="none" stroke="#B8975A" stroke-width=".8" opacity=".5"/><g transform="translate(20 14)"><defs><clipPath id="st334"><path d="M10 10h70v16h-52v26h44v16h-44v42h-18z"/><path d="M92 10h16l38 62v-62h16v100h-16l-38-62v62h-16z"/></clipPath></defs><g clip-path="url(#st334)"><circle cx="96" cy="60" r="4.0" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="20.2" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="96" cy="60" r="36.4" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="52.7" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="96" cy="60" r="68.9" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="85.1" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="96" cy="60" r="101.3" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="117.6" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="96" cy="60" r="133.8" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="150.0" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/></g><path d="M10 10h70v16h-52v26h44v16h-44v42h-18z" fill="none" stroke="#B8975A" stroke-width="1.8"/><path d="M92 10h16l38 62v-62h16v100h-16l-38-62v62h-16z" fill="none" stroke="#B8975A" stroke-width="1.8"/></g><text x="106" y="148" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="15" fill="#B8975A" letter-spacing="4">FN · 334</text></svg></span></div>
+        <div>
+          <p class="no mono">FN-334 · GROWTH</p>
+          <h3 class="serif">Auxomate</h3>
+          <p class="desc">전략을 세운 사람이 실행까지 맡는다. 판단은 전략가 한 사람이, 물량은 AI 파이프라인이. 이미 증명된 성장의 역량이 제 회사를 가졌을 때 얼마나 더 빨라지는가. 첫 번째 레이블.</p>
+          <dl class="credits mono"><dt>발매</dt><dd>2026.09</dd><dt>역할</dt><dd>Growth · AI 드리븐 마케팅</dd><dt>상태</dt><dd class="gold">LIVE</dd></dl>
+        </div>
+      </article>
+      <article class="release" id="r453">
+        <div class="cover"><div class="art"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g opacity="0.35"><rect x="36" y="120" width="80" height="160" rx="12" fill="none" stroke="#B8975A" stroke-width="1.4"/><rect class="scan" style="animation-delay:0.09s" x="46" y="136.0" width="60" height="7.1" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:0.44s" x="46" y="150.22222222222223" width="60" height="7.1" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:0.79s" x="46" y="164.44444444444446" width="60" height="7.1" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:1.14s" x="46" y="178.66666666666666" width="60" height="7.1" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:1.49s" x="46" y="192.88888888888889" width="60" height="7.1" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:1.84s" x="46" y="207.11111111111111" width="60" height="7.1" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:2.19s" x="46" y="221.33333333333331" width="60" height="7.1" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:2.54s" x="46" y="235.55555555555554" width="60" height="7.1" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:2.89s" x="46" y="249.77777777777777" width="60" height="7.1" rx="2" fill="#B8975A"/></g><g opacity="0.35"><rect x="284" y="120" width="80" height="160" rx="12" fill="none" stroke="#B8975A" stroke-width="1.4"/><rect class="scan" style="animation-delay:0.71s" x="294" y="136.0" width="60" height="7.1" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:1.06s" x="294" y="150.22222222222223" width="60" height="7.1" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:1.41s" x="294" y="164.44444444444446" width="60" height="7.1" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:1.76s" x="294" y="178.66666666666666" width="60" height="7.1" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:2.11s" x="294" y="192.88888888888889" width="60" height="7.1" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:2.46s" x="294" y="207.11111111111111" width="60" height="7.1" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:2.81s" x="294" y="221.33333333333331" width="60" height="7.1" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:3.16s" x="294" y="235.55555555555554" width="60" height="7.1" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:3.51s" x="294" y="249.77777777777777" width="60" height="7.1" rx="2" fill="#B8975A"/></g><g opacity="1"><rect x="140" y="80" width="120" height="240" rx="18" fill="none" stroke="#B8975A" stroke-width="1.4"/><rect class="scan" style="animation-delay:0.35s" x="150" y="96.0" width="100" height="11.6" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:0.70s" x="150" y="119.11111111111111" width="100" height="11.6" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:1.05s" x="150" y="142.22222222222223" width="100" height="11.6" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:1.40s" x="150" y="165.33333333333331" width="100" height="11.6" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:1.75s" x="150" y="188.44444444444446" width="100" height="11.6" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:2.10s" x="150" y="211.55555555555554" width="100" height="11.6" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:2.45s" x="150" y="234.66666666666666" width="100" height="11.6" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:2.80s" x="150" y="257.77777777777777" width="100" height="11.6" rx="2" fill="#B8975A"/><rect class="scan" style="animation-delay:3.15s" x="150" y="280.8888888888889" width="100" height="11.6" rx="2" fill="#B8975A"/></g><polygon class="play" points="186,180 186,220 222,200" fill="#B8975A"/><rect x="50" y="350" width="4" height="6" fill="#B8975A" opacity="0.2" class="eq" style="animation-delay:0.00s"/><rect x="58" y="350" width="4" height="13" fill="#B8975A" opacity="0.7" class="eq" style="animation-delay:0.13s"/><rect x="66" y="350" width="4" height="20" fill="#B8975A" opacity="0.5" class="eq" style="animation-delay:0.26s"/><rect x="74" y="350" width="4" height="9" fill="#B8975A" opacity="0.30000000000000004" class="eq" style="animation-delay:0.39s"/><rect x="82" y="350" width="4" height="16" fill="#B8975A" opacity="0.8" class="eq" style="animation-delay:0.52s"/><rect x="90" y="350" width="4" height="23" fill="#B8975A" opacity="0.6000000000000001" class="eq" style="animation-delay:0.65s"/><rect x="98" y="350" width="4" height="12" fill="#B8975A" opacity="0.4" class="eq" style="animation-delay:0.78s"/><rect x="106" y="350" width="4" height="19" fill="#B8975A" opacity="0.2" class="eq" style="animation-delay:0.91s"/><rect x="114" y="350" width="4" height="8" fill="#B8975A" opacity="0.7" class="eq" style="animation-delay:1.04s"/><rect x="122" y="350" width="4" height="15" fill="#B8975A" opacity="0.5" class="eq" style="animation-delay:1.17s"/><rect x="130" y="350" width="4" height="22" fill="#B8975A" opacity="0.30000000000000004" class="eq" style="animation-delay:0.00s"/><rect x="138" y="350" width="4" height="11" fill="#B8975A" opacity="0.8" class="eq" style="animation-delay:0.13s"/><rect x="146" y="350" width="4" height="18" fill="#B8975A" opacity="0.6000000000000001" class="eq" style="animation-delay:0.26s"/><rect x="154" y="350" width="4" height="7" fill="#B8975A" opacity="0.4" class="eq" style="animation-delay:0.39s"/><rect x="162" y="350" width="4" height="14" fill="#B8975A" opacity="0.2" class="eq" style="animation-delay:0.52s"/><rect x="170" y="350" width="4" height="21" fill="#B8975A" opacity="0.7" class="eq" style="animation-delay:0.65s"/><rect x="178" y="350" width="4" height="10" fill="#B8975A" opacity="0.5" class="eq" style="animation-delay:0.78s"/><rect x="186" y="350" width="4" height="17" fill="#B8975A" opacity="0.30000000000000004" class="eq" style="animation-delay:0.91s"/><rect x="194" y="350" width="4" height="6" fill="#B8975A" opacity="0.8" class="eq" style="animation-delay:1.04s"/><rect x="202" y="350" width="4" height="13" fill="#B8975A" opacity="0.6000000000000001" class="eq" style="animation-delay:1.17s"/><rect x="210" y="350" width="4" height="20" fill="#B8975A" opacity="0.4" class="eq" style="animation-delay:0.00s"/><rect x="218" y="350" width="4" height="9" fill="#B8975A" opacity="0.2" class="eq" style="animation-delay:0.13s"/><rect x="226" y="350" width="4" height="16" fill="#B8975A" opacity="0.7" class="eq" style="animation-delay:0.26s"/><rect x="234" y="350" width="4" height="23" fill="#B8975A" opacity="0.5" class="eq" style="animation-delay:0.39s"/><rect x="242" y="350" width="4" height="12" fill="#B8975A" opacity="0.30000000000000004" class="eq" style="animation-delay:0.52s"/><rect x="250" y="350" width="4" height="19" fill="#B8975A" opacity="0.8" class="eq" style="animation-delay:0.65s"/><rect x="258" y="350" width="4" height="8" fill="#B8975A" opacity="0.6000000000000001" class="eq" style="animation-delay:0.78s"/><rect x="266" y="350" width="4" height="15" fill="#B8975A" opacity="0.4" class="eq" style="animation-delay:0.91s"/><rect x="274" y="350" width="4" height="22" fill="#B8975A" opacity="0.2" class="eq" style="animation-delay:1.04s"/><rect x="282" y="350" width="4" height="11" fill="#B8975A" opacity="0.7" class="eq" style="animation-delay:1.17s"/><rect x="290" y="350" width="4" height="18" fill="#B8975A" opacity="0.5" class="eq" style="animation-delay:0.00s"/><rect x="298" y="350" width="4" height="7" fill="#B8975A" opacity="0.30000000000000004" class="eq" style="animation-delay:0.13s"/><rect x="306" y="350" width="4" height="14" fill="#B8975A" opacity="0.8" class="eq" style="animation-delay:0.26s"/><rect x="314" y="350" width="4" height="21" fill="#B8975A" opacity="0.6000000000000001" class="eq" style="animation-delay:0.39s"/><rect x="322" y="350" width="4" height="10" fill="#B8975A" opacity="0.4" class="eq" style="animation-delay:0.52s"/><rect x="330" y="350" width="4" height="17" fill="#B8975A" opacity="0.2" class="eq" style="animation-delay:0.65s"/><rect x="338" y="350" width="4" height="6" fill="#B8975A" opacity="0.7" class="eq" style="animation-delay:0.78s"/><rect x="346" y="350" width="4" height="13" fill="#B8975A" opacity="0.5" class="eq" style="animation-delay:0.91s"/></svg></div><span class="big serif" style="right:22px;bottom:18px;transform:none">453</span><span class="code"><svg viewBox="0 0 212 160" style="width:84px;height:63px" aria-hidden="true"><rect x="1" y="1" width="210" height="158" fill="none" stroke="#B8975A" stroke-width="2"/><rect x="8" y="8" width="196" height="144" fill="none" stroke="#B8975A" stroke-width=".8" opacity=".5"/><g transform="translate(20 14)"><defs><clipPath id="st453"><path d="M10 10h70v16h-52v26h44v16h-44v42h-18z"/><path d="M92 10h16l38 62v-62h16v100h-16l-38-62v62h-16z"/></clipPath></defs><g clip-path="url(#st453)"><circle cx="96" cy="60" r="4.0" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="20.2" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="96" cy="60" r="36.4" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="52.7" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="96" cy="60" r="68.9" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="85.1" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="96" cy="60" r="101.3" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="117.6" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="96" cy="60" r="133.8" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="150.0" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/></g><path d="M10 10h70v16h-52v26h44v16h-44v42h-18z" fill="none" stroke="#B8975A" stroke-width="1.8"/><path d="M92 10h16l38 62v-62h16v100h-16l-38-62v62h-16z" fill="none" stroke="#B8975A" stroke-width="1.8"/></g><text x="106" y="148" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="15" fill="#B8975A" letter-spacing="4">FN · 453</text></svg></span></div>
+        <div>
+          <p class="no mono">FN-453 · PLATFORM</p>
+          <h3 class="serif">Aiya</h3>
+          <p class="desc">AI 숏폼 웹드라마 플랫폼. 관객과 지면. Fanaai가 직접 운영하는 유일한 레이블이자, 다른 레이블들이 처음 오르고 서로를 만나는 무대. 다음 작품은 앞 작품 안에서 막을 올린다.</p>
+          <dl class="credits mono"><dt>발매</dt><dd>2026</dd><dt>역할</dt><dd>Platform · AI 숏폼 웹드라마</dd><dt>상태</dt><dd class="gold">SOON</dd></dl>
+        </div>
+      </article>
+      <article class="release" id="rNNN">
+        <div class="cover"><div class="art"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect class="sb" style="animation-delay:0.0s" x="70" y="100" width="76" height="62" rx="2" fill="#B8975A" stroke="#B8975A" stroke-width="1"/><rect class="sb" style="animation-delay:0.5s" x="160" y="100" width="76" height="62" rx="2" fill="#B8975A" stroke="#B8975A" stroke-width="1"/><rect class="sb" style="animation-delay:1.0s" x="250" y="100" width="76" height="62" rx="2" fill="#B8975A" stroke="#B8975A" stroke-width="1"/><rect class="sb" style="animation-delay:1.5s" x="70" y="178" width="76" height="62" rx="2" fill="#B8975A" stroke="#B8975A" stroke-width="1"/><rect class="sb" style="animation-delay:2.0s" x="160" y="178" width="76" height="62" rx="2" fill="#B8975A" stroke="#B8975A" stroke-width="1"/><rect class="sb" style="animation-delay:2.5s" x="250" y="178" width="76" height="62" rx="2" fill="#B8975A" stroke="#B8975A" stroke-width="1"/><rect class="sb" style="animation-delay:3.0s" x="70" y="256" width="76" height="62" rx="2" fill="#B8975A" stroke="#B8975A" stroke-width="1"/><rect class="sb" style="animation-delay:3.5s" x="160" y="256" width="76" height="62" rx="2" fill="#B8975A" stroke="#B8975A" stroke-width="1"/><rect class="sb" style="animation-delay:4.0s" x="250" y="256" width="76" height="62" rx="2" fill="#B8975A" stroke="#B8975A" stroke-width="1"/><rect class="clap" style="animation-delay:0.00s" x="70" y="60" width="20" height="18" fill="#B8975A" transform="skewX(-20) translate(14 0)"/><rect class="clap" style="animation-delay:0.15s" x="110" y="60" width="20" height="18" fill="#B8975A" transform="skewX(-20) translate(14 0)"/><rect class="clap" style="animation-delay:0.30s" x="150" y="60" width="20" height="18" fill="#B8975A" transform="skewX(-20) translate(14 0)"/><rect class="clap" style="animation-delay:0.45s" x="190" y="60" width="20" height="18" fill="#B8975A" transform="skewX(-20) translate(14 0)"/><rect class="clap" style="animation-delay:0.60s" x="230" y="60" width="20" height="18" fill="#B8975A" transform="skewX(-20) translate(14 0)"/><rect class="clap" style="animation-delay:0.75s" x="270" y="60" width="20" height="18" fill="#B8975A" transform="skewX(-20) translate(14 0)"/><rect class="clap" style="animation-delay:0.90s" x="310" y="60" width="20" height="18" fill="#B8975A" transform="skewX(-20) translate(14 0)"/><line x1="70" y1="86" x2="334" y2="86" stroke="#B8975A" stroke-width="1.2"/></svg></div><span class="big serif" style="left:50%;top:50%;transform:translate(-50%,-50%)">NNN</span><span class="code"><svg viewBox="0 0 212 160" style="width:84px;height:63px" aria-hidden="true"><rect x="1" y="1" width="210" height="158" fill="none" stroke="#B8975A" stroke-width="2"/><rect x="8" y="8" width="196" height="144" fill="none" stroke="#B8975A" stroke-width=".8" opacity=".5"/><g transform="translate(20 14)"><defs><clipPath id="stNNN"><path d="M10 10h70v16h-52v26h44v16h-44v42h-18z"/><path d="M92 10h16l38 62v-62h16v100h-16l-38-62v62h-16z"/></clipPath></defs><g clip-path="url(#stNNN)"><circle cx="96" cy="60" r="4.0" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="20.2" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="96" cy="60" r="36.4" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="52.7" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="96" cy="60" r="68.9" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="85.1" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="96" cy="60" r="101.3" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="117.6" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="96" cy="60" r="133.8" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="96" cy="60" r="150.0" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/></g><path d="M10 10h70v16h-52v26h44v16h-44v42h-18z" fill="none" stroke="#B8975A" stroke-width="1.8"/><path d="M92 10h16l38 62v-62h16v100h-16l-38-62v62h-16z" fill="none" stroke="#B8975A" stroke-width="1.8"/></g><text x="106" y="148" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="15" fill="#B8975A" letter-spacing="4">FN · NNN</text></svg></span></div>
+        <div>
+          <p class="no mono">FN-NNN · CONTENTS</p>
+          <h3 class="serif">ZeroAct</h3>
+          <p class="desc">웹드라마 제작과 IP. Aiya에 먼저 올리고, Aiya 너머에도 판다. 사라진 제작 비용이 실제로 작품이 되고, 그 작품이 값을 받는가. 두 번째 레이블.</p>
+          <dl class="credits mono"><dt>발매</dt><dd>2027</dd><dt>역할</dt><dd>Contents · 드라마 · IP</dd><dt>상태</dt><dd class="gold">SOON</dd></dl>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="paper" id="label">
+    <div class="wrap">
+      <div class="sec-head"><h2 class="mono">The house</h2><p class="mono">하우스가 주는 것</p></div>
+      <h2 class="serif big-h">하우스는 네 가지를 준다.<br>나머지는 전부 당신의 것이다.</h2>
+      <div class="gives">
+        <div><span class="mono">01 · PRODUCT</span><b class="serif">함께 만드는 제품</b><span>AI로, 분기가 아니라 주 단위로. 하우스가 혼자 만들어 넘기는 것이 아니라, 처음부터 같이 만든다. 출시와 첫 매출까지 곁에 선다.</span></div>
+        <div><span class="mono">02 · FRAME</span><b class="serif">같은 틀</b><span>법인, 계약, 지분 구조, 궤도의 숫자. 모든 레이블이 같은 틀에서 나온다. 처음 하는 사람도 처음이 아니다.</span></div>
+        <div><span class="mono">03 · STAGE</span><b class="serif">무대</b><span>Aiya의 지면과 관객. 새 레이블은 빈 곳에서 시작하지 않는다. 앞 작품 안에서 막을 올린다.</span></div>
+        <div><span class="mono">04 · GROWTH</span><b class="serif">성장</b><span>Auxomate의 마케팅과 성장 역량. 사람을 불러오고 머물게 하는 일을 레이블 혼자 떠안지 않는다.</span></div>
+      </div>
+      <div class="ten-row" style="grid-template-columns:1fr">
+        <p>하우스가 하는 일은 셋뿐이다. 사람을 고르고, 틀을 지키고, 궤도에 오르면 물러난다. 결정은 레이블의 것이고, 하우스는 결정하지 않는다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <div class="disc"><svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="500" cy="500" r="190.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="194.8" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="199.5" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="204.3" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="209.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="213.8" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="218.6" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="223.3" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="228.1" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="232.9" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="237.6" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="242.4" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="247.1" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="251.9" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="256.7" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="261.4" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="266.2" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="271.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="275.7" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="280.5" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="285.2" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="290.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="294.8" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="299.5" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="304.3" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="309.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="313.8" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="318.6" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="323.3" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="328.1" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="332.9" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="337.6" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="342.4" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="347.1" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="351.9" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="356.7" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="361.4" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="366.2" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="371.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="375.7" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="380.5" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="385.2" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="390.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="394.8" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="399.5" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="404.3" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="409.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="413.8" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="418.6" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="423.3" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="428.1" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="432.9" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="437.6" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="442.4" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="447.1" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="451.9" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="456.7" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="461.4" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="466.2" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="471.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="475.7" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="480.5" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="485.2" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="0.35"/><circle cx="500" cy="500" r="490.0" fill="none" stroke="#B8975A" stroke-width="0.6" opacity="1.0"/><circle cx="500" cy="500" r="180" fill="none" stroke="#B8975A" stroke-width="1"/><circle cx="500" cy="500" r="8" fill="#B8975A"/><text x="500" y="470" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="18" fill="#B8975A" letter-spacing="4">FANAAI</text><text x="500" y="548" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#B8975A" letter-spacing="3">A LABEL · SIDE A · 33⅓</text></svg></div>
+    <div class="wrap">
+      <p class="cat mono">NEXT LABEL · FN-___</p>
+      <h2 class="serif">다음 레이블은,<br>당신이다.</h2>
+      <p>한 가지에 이미 탁월하되, 아직 남의 회사에서 그것을 하고 있는 사람. 제 것이 되었을 때 어떻게 움직일지 아직 보지 못한 사람. 만드는 것은 하우스가 한다. 번호도, 이름도 당신이 정한다.</p>
+      <div class="doors">
+        <div><b class="serif">FOUNDER · 다음 대표</b><span>한 기능에 이미 탁월한 사람. 하우스가 만든 것을 제 회사로 가져갈 사람.</span></div>
+        <div><b class="serif">STORY · 원작</b><span>웹소설, 웹툰, 이야기. AI의 비용으로 숏드라마가 되어 Aiya에서 막을 올린다.</span></div>
+        <div><b class="serif">BRAND · 파트너</b><span>캠페인과 크리에이티브, 작품 안의 자리까지. Auxomate가 맡는다.</span></div>
+      </div>
+      <a class="mail mono" href="mailto:master@fana.club">master@fana.club</a>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <footer class="mono">
+      <span style="display:flex;align-items:center;gap:8px"><svg viewBox="0 0 90 120" style="width:14px;height:19px" aria-hidden="true"><defs><clipPath id="ftf"><path d="M10 10h70v16h-52v26h44v16h-44v42h-18z"/></clipPath></defs><g clip-path="url(#ftf)"><circle cx="52" cy="62" r="4.0" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="52" cy="62" r="17.1" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="52" cy="62" r="30.3" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="52" cy="62" r="43.4" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="52" cy="62" r="56.6" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="52" cy="62" r="69.7" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="52" cy="62" r="82.9" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="52" cy="62" r="96.0" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/></g><path d="M10 10h70v16h-52v26h44v16h-44v42h-18z" fill="none" stroke="#B8975A" stroke-width="1.6"/></svg> © 2026 Fanaai, Inc. · Delaware</span>
+      <span>1111B S Governors Ave, STE 87820, Dover, DE 19904</span>
+      <span style="display:flex;flex-wrap:wrap;gap:6px 16px"><a href="/legal.html#privacy-ko" style="color:inherit">개인정보처리방침</a><a href="/legal.html#terms-ko" style="color:inherit">이용약관</a><a href="/legal.html#support-ko" style="color:inherit">고객지원</a><a href="/legal.html#delete-ko" style="color:inherit">계정 삭제</a></span>
+    </footer>
+  </div>
+
+</main>
+<script>(function(){var els=document.querySelectorAll(".rv");if(!("IntersectionObserver" in window)){els.forEach(function(e){e.classList.add("in")});return}var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in")}else if(x.boundingClientRect.top>0){x.target.classList.remove("in")}})},{threshold:.15});els.forEach(function(e){io.observe(e)})})();</script>
+</body>
+</html>
