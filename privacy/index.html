@@ -1,10 +1,119 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aiya · Fanaai</title>
-<script>
-var l=(navigator.language||"en").toLowerCase(),c="en";
-if(l.indexOf("ko")===0)c="ko";else if(l.indexOf("ja")===0)c="ja";else if(l.indexOf("zh")===0)c="zh";
-location.replace("/legal.html#privacy-"+c);
-</script>
-<meta http-equiv="refresh" content="1; url=/legal.html#privacy-en">
-</head><body><p><a href="/legal.html#privacy-en">Continue</a></p></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aiya · Privacy Policy</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&family=Hanken+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Noto+Sans+KR:wght@400;600;700&family=Noto+Sans+JP:wght@400;600;700&family=Noto+Sans+TC:wght@400;600;700&display=swap">
+<style>
+/* Layout: sticky header with doc tabs + language switch, single reading column ~68ch */
+:root{
+  color-scheme:dark; --bg:#15171A; --surface:#1C1F23; --fg:#F3EFE6; --muted:#B9B3A6; --line:rgba(243,239,230,.12); --accent:#B8975A; --accent-soft:rgba(184,151,90,.16); --ph-bg:#3d3214; --ph-fg:#ffd978;
+  --display:"Noto Serif KR", Georgia, serif;
+  --body:"Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+html:lang(ko) {--body:"Hanken Grotesk","Noto Sans KR",system-ui,sans-serif}
+html:lang(ja) {--body:"Hanken Grotesk","Noto Sans JP",system-ui,sans-serif}
+html:lang(zh-Hant) {--body:"Hanken Grotesk","Noto Sans TC",system-ui,sans-serif}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.7}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar,.wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;padding-block:12px}
+.mark{font-family:var(--display);font-size:30px;line-height:1;color:var(--accent);text-decoration:none;font-style:italic;letter-spacing:-.01em}
+nav{display:flex;flex-wrap:wrap;gap:4px;flex:1;min-width:0}
+nav a{font-size:14px;font-weight:500;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:999px;white-space:nowrap}
+nav a:hover{color:var(--fg);background:var(--surface)}
+nav a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
+select{font:inherit;font-size:14px;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 8px}
+a:focus-visible,select:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+main.wrap{padding-block:40px 80px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;font-weight:700;letter-spacing:-.015em;margin:0 0 8px;text-wrap:balance}
+.meta{color:var(--muted);font-size:14px;margin:0 0 28px;font-variant-numeric:tabular-nums}
+.lead{font-size:17px;max-width:68ch}
+h2{font-size:19px;font-weight:700;margin:40px 0 8px;padding-top:16px;border-top:1px solid var(--line);text-wrap:balance}
+h3{font-size:16px;font-weight:600;margin:20px 0 4px}
+p,ul,ol{max-width:68ch;margin:0 0 12px}
+ul,ol{padding-left:1.25em}
+li{margin:4px 0}
+li::marker{color:var(--accent)}
+a{color:var(--accent)}
+strong{font-weight:600}
+.ph{background:var(--ph-bg);color:var(--ph-fg);border-radius:4px;padding:0 4px;font-weight:600;white-space:nowrap}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:16px 0;max-width:68ch}
+.box p:last-child{margin-bottom:0}
+.contact{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.contact code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:15px;user-select:all;word-break:break-all}
+button.copy{font:inherit;font-size:13px;font-weight:600;color:var(--accent);background:transparent;border:1px solid var(--accent);border-radius:999px;padding:3px 12px;cursor:pointer}
+footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:56px;padding-top:16px}
+@media (prefers-reduced-motion:no-preference){nav a{transition:background .15s,color .15s}}
+</style>
+
+<style>*{box-sizing:border-box}html,body{margin:0}</style>
+<style>.langs{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:13px}.langs a{color:var(--muted);text-decoration:none}.langs a[aria-current]{color:var(--accent)}</style><link rel="canonical" href="https://fana.club/privacy/"></head>
+<body>
+<header><div class="bar"><a class="mark" href="/" id="home">Fanaai</a><nav aria-label="Documents"><a href="/privacy/" aria-current="page">Privacy Policy</a><a href="/terms/">Terms of Service</a><a href="/support/">Support</a><a href="/delete-account/">Delete Account</a></nav><nav class="langs" aria-label="Language"><a href="/privacy/" hreflang="en" aria-current="true">English</a><a href="/legal.html#privacy-ko" hreflang="ko">한국어</a><a href="/legal.html#privacy-ja" hreflang="ja">日本語</a><a href="/legal.html#privacy-zh" hreflang="zh-Hant">繁體中文</a></nav></div></header>
+<main class="wrap"><h1>Privacy Policy</h1><p class="meta">Effective: 2026-10-30</p>
+<p class="lead">This Privacy Policy explains how Fanaai, Inc. ("Fanaai", "we", "us") collects, uses and shares information when you use the Aiya mobile app and related websites (the "Service").</p>
+<h2>1. Who we are</h2>
+<p>Aiya is operated by Fanaai, Inc., a company organized in Delaware, USA, with its address at 1111B S Governors Ave Ste 87820, Dover, DE 19904, USA. For privacy questions, contact master@fana.club.</p>
+<h2>2. Information we collect</h2>
+<ul>
+<li><strong>Account information.</strong> When you sign in with Google or Apple, we receive your name, email address (or Apple's private relay address) and an account ID. You may also add a nickname and profile image.</li>
+<li><strong>Purchase information.</strong> Coin purchases, transaction IDs, your coin balance and the episodes you unlock. Payments are processed by Apple or Google. We never receive your full card number.</li>
+<li><strong>Usage information.</strong> Episodes you watch, watch progress, likes, follows, searches and in-app settings.</li>
+<li><strong>Device information.</strong> Device model, operating system, app version, language, time zone, IP address, push notification token and device identifiers.</li>
+<li><strong>Diagnostics.</strong> Crash logs and performance data.</li>
+<li><strong>Communications.</strong> Messages you send to support and reports you submit.</li>
+<li><strong>Creator information.</strong> If you join as a creator: your profile, uploaded content, and the details needed to pay you, such as legal name, payout account and tax forms.</li>
+</ul>
+<h2>3. How we use information</h2>
+<ul>
+<li>Provide and operate the Service, including streaming and saving your progress</li>
+<li>Process purchases, keep your coin balance accurate and restore purchases</li>
+<li>Recommend series based on what you watch</li>
+<li>Pay creators and give them aggregated statistics that do not identify you</li>
+<li>Keep the Service safe: prevent fraud, enforce our Terms and review reported content</li>
+<li>Analyze usage, fix bugs and improve the Service</li>
+<li>Send service messages and, if you allow it, push notifications about new episodes</li>
+<li>Comply with legal obligations</li>
+</ul>
+<p>We do not sell your personal information, and we do not share it with third parties for targeted advertising. If this changes, we will update this policy first and give you the choices the law requires.</p>
+<h2>4. How we share information</h2>
+<ul>
+<li><strong>Service providers</strong> that host, analyze or support the Service (cloud hosting, analytics, crash reporting, customer support, email). They may use the data only to provide services to us.</li>
+<li><strong>Apple and Google</strong>, to process in-app purchases.</li>
+<li><strong>Payout providers</strong>, to pay creators.</li>
+<li><strong>Authorities or other parties</strong>, when required by law or needed to protect the rights and safety of users or others.</li>
+<li><strong>A successor</strong>, in a merger, acquisition or sale of assets.</li>
+<li><strong>Others</strong>, with your consent.</li>
+</ul>
+<p>A list of our main service providers and the countries where they process data is available on request at master@fana.club.</p>
+<h2>5. International transfers</h2>
+<p>We are based in the United States. Your information is stored and processed in the United States and in other countries where our service providers operate. These countries may have data protection laws that differ from those in your country. We use contractual and technical safeguards to protect information when it is transferred.</p>
+<h2>6. How long we keep information</h2>
+<p>We keep your information while your account is active. After you delete your account, we delete or anonymize your information within 30 days, except records we must keep by law (such as purchase and tax records) or need to resolve disputes and prevent fraud. Those records are kept only for the required period.</p>
+<h2>7. Your rights and choices</h2>
+<p>Depending on where you live, including California and other U.S. states, Korea, Japan and Taiwan, you may have the right to:</p>
+<ul>
+<li>access the personal information we hold about you and receive a copy</li>
+<li>correct inaccurate information</li>
+<li>delete your information</li>
+<li>withdraw consent or ask us to stop or limit certain processing</li>
+<li>opt out of the sale or sharing of personal information or targeted advertising (we do neither)</li>
+</ul>
+<p>To make a request, email master@fana.club from the email address on your account. We will verify your identity and respond within the time the law requires. You may use an authorized agent where the law allows. We will not treat you differently for exercising your rights. You can turn off push notifications in your device settings at any time.</p>
+<h2>8. Deleting your account</h2>
+<p>In the app, go to <strong>Profile &gt; Settings &gt; Delete account</strong>. You can also follow the steps on our <a href="/delete-account/">Delete Account</a> page. Deleting your account permanently removes your profile, watch history and any remaining coins. Remaining coins cannot be refunded or restored, except where the law requires.</p>
+<h2>9. Children</h2>
+<p>The Service is not intended for children under 13 (under 14 in Korea). We do not knowingly collect personal information from them. If we learn that we have, we will delete it. Users under the age of majority should use the Service, and make purchases, only with permission from a parent or guardian.</p>
+<h2>10. Security</h2>
+<p>We protect information with measures such as encryption in transit and access controls. No method of transmission or storage is completely secure, so we cannot guarantee absolute security.</p>
+<h2>11. Changes to this policy</h2>
+<p>We will post any changes on this page and update the effective date. For material changes, we will also notify you in the app before they take effect.</p>
+<h2>12. Contact us</h2>
+<p>Fanaai, Inc.<br>Attn: Privacy<br>1111B S Governors Ave Ste 87820, Dover, DE 19904, USA<br>master@fana.club</p><footer>Aiya is operated by Fanaai, Inc. Translations are provided for convenience; the English version controls to the extent permitted by law.</footer></main>
+</body>
+</html>
