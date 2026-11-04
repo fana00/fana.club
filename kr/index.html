@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20120%20120%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20rx%3D%2224%22%20fill%3D%22%2315171A%22/%3E%3Cg%20transform%3D%22translate%2815%200%29%22%3E%3Cdefs%3E%3CclipPath%20id%3D%22fz%22%3E%3Cpath%20d%3D%22M10%2010h70v16h-52v26h44v16h-44v42h-18z%22/%3E%3C/clipPath%3E%3C/defs%3E%3Cg%20clip-path%3D%22url%28%23fz%29%22%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%224.0%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%221.0%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%2214.2%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%220.5%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%2224.4%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%221.0%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%2234.7%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%220.5%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%2244.9%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%221.0%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%2255.1%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%220.5%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%2265.3%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%221.0%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%2275.6%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%220.5%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%2285.8%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%221.0%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2262%22%20r%3D%2296.0%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%223%22%20opacity%3D%220.5%22/%3E%3C/g%3E%3Cpath%20d%3D%22M10%2010h70v16h-52v26h44v16h-44v42h-18z%22%20fill%3D%22none%22%20stroke%3D%22%23B8975A%22%20stroke-width%3D%221.4%22/%3E%3C/g%3E%3C/svg%3E">
-<title>Fanaai — 만드는 비용은 사라진다. 가치는 사람에게 남는다.</title>
+<title>Fanaai — 가치는 사람에게 남는다.</title>
 <link rel="alternate" hreflang="en" href="https://fana.club/">
 <link rel="alternate" hreflang="ko" href="https://fana.club/kr/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,6 +37,11 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;h
 .langs{display:flex;gap:10px;margin-left:18px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em}
 .langs a{color:var(--ink-3)}
 .langs a.on{color:var(--gold)}
+.lang-toggle{display:inline-flex;align-items:center;gap:2px;margin-left:18px;padding:3px;border:1px solid var(--line);border-radius:999px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em}
+.lang-toggle a{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;color:var(--ink-3);transition:background .2s,color .2s}
+.lang-toggle a:hover{color:var(--ink)}
+.lang-toggle a.on{background:var(--gold);color:var(--bg);pointer-events:none}
+.lang-toggle svg{width:16px;height:11px;border-radius:2px;display:block;box-shadow:0 0 0 1px rgba(0,0,0,.15)}
 nav{display:flex;gap:28px}
 nav a{font-size:13px;color:var(--ink-2);padding:8px 0;border-bottom:1px solid transparent}
 nav a:hover{color:var(--ink);border-bottom-color:var(--gold)}
@@ -324,7 +329,7 @@ main{position:relative;z-index:1}
       <a href="#catalog">Catalog</a>
       <a href="#label">House</a>
       <a href="#contact">Next</a>
-      <span class="langs"><a class="on" href="/kr/">KO</a><a href="/">EN</a></span>
+      <span class="lang-toggle" role="group" aria-label="Language"><a href="/" lang="en"><svg viewBox="0 0 19 10" aria-hidden="true"><rect width="19" height="10" fill="#B22234"/><path d="M0 1.15h19M0 2.7h19M0 4.23h19M0 5.77h19M0 7.3h19M0 8.85h19" stroke="#fff" stroke-width=".77"/><rect width="7.6" height="5.38" fill="#3C3B6E"/></svg>EN</a><a href="/kr/" class="on" aria-current="page" lang="ko"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><path d="M10 10a5 5 0 0 1 10 0z" fill="#CD2E3A"/><path d="M20 10a5 5 0 0 1-10 0z" fill="#0047A0"/><circle cx="12.5" cy="10" r="2.5" fill="#CD2E3A"/><circle cx="17.5" cy="10" r="2.5" fill="#0047A0"/><g fill="#000"><g transform="rotate(-33.7 5.5 4.5)"><rect x="3.3" y="2.6" width="4.4" height=".8"/><rect x="3.3" y="4.1" width="4.4" height=".8"/><rect x="3.3" y="5.6" width="4.4" height=".8"/></g><g transform="rotate(-33.7 24.5 15.5)"><rect x="22.3" y="13.6" width="4.4" height=".8"/><rect x="22.3" y="15.1" width="4.4" height=".8"/><rect x="22.3" y="16.6" width="4.4" height=".8"/></g><g transform="rotate(33.7 24.5 4.5)"><rect x="22.3" y="2.6" width="4.4" height=".8"/><rect x="22.3" y="4.1" width="4.4" height=".8"/><rect x="22.3" y="5.6" width="4.4" height=".8"/></g><g transform="rotate(33.7 5.5 15.5)"><rect x="3.3" y="13.6" width="4.4" height=".8"/><rect x="3.3" y="15.1" width="4.4" height=".8"/><rect x="3.3" y="16.6" width="4.4" height=".8"/></g></g></svg>KO</a></span>
     </nav>
   </div>
 </header>
@@ -363,8 +368,8 @@ main{position:relative;z-index:1}
       <div class="formula"><h2 class="serif">한 사람이 한 회사가 된다.<br>회사들의 가치를 서로 곱한다.</h2><p class="bet-sub">만드는 레이블(Contents), 무대가 되는 레이블(Platform), 키우는 레이블(Growth). 레이블마다 하나의 역할을 맡고, 하우스는 그 고리를 잇는다.</p></div>
       <ol>
         <li><a href="#r334"><span class="no mono">FN-334</span><span class="name serif">Auxomate</span><span class="meta">AI 드리븐 마케팅</span><span class="meta mono">GROWTH</span><span class="st mono">2026.09 · LIVE</span></a></li>
-        <li><a href="#r453"><span class="no mono">FN-453</span><span class="name serif">Aiya</span><span class="meta">AI 숏폼 웹드라마 플랫폼</span><span class="meta mono">PLATFORM</span><span class="st mono">2026 · SOON</span></a></li>
-        <li><a href="#rNNN"><span class="no mono">FN-NNN</span><span class="name serif">ZeroAct</span><span class="meta">웹드라마 제작 · IP</span><span class="meta mono">CONTENTS</span><span class="st mono">2027 · SOON</span></a></li>
+        <li><a href="#r453"><span class="no mono">FN-453</span><span class="name serif">Aiya</span><span class="meta">AI 숏폼 웹드라마 플랫폼</span><span class="meta mono">PLATFORM</span><span class="st mono">2026.12 · SOON</span></a></li>
+        <li><a href="#rNNN"><span class="no mono">FN-NNN</span><span class="name serif">ZeroAct</span><span class="meta">웹드라마 제작 · IP</span><span class="meta mono">CONTENTS</span><span class="st mono">2026.12 · SOON</span></a></li>
       </ol>
     </div>
   </section>
@@ -387,7 +392,7 @@ main{position:relative;z-index:1}
           <p class="no mono">FN-453 · PLATFORM</p>
           <h3 class="serif">Aiya</h3>
           <p class="desc">AI 숏폼 웹드라마 플랫폼. 관객과 지면. Fanaai가 직접 운영하는 유일한 레이블이자, 다른 레이블들이 처음 오르고 서로를 만나는 무대. 다음 작품은 앞 작품 안에서 막을 올린다.</p>
-          <dl class="credits mono"><dt>발매</dt><dd>2026</dd><dt>역할</dt><dd>Platform · AI 숏폼 웹드라마</dd><dt>상태</dt><dd class="gold">SOON</dd></dl>
+          <dl class="credits mono"><dt>발매</dt><dd>2026.12</dd><dt>역할</dt><dd>Platform · AI 숏폼 웹드라마</dd><dt>상태</dt><dd class="gold">SOON</dd></dl>
         </div>
       </article>
       <article class="release" id="rNNN">
@@ -396,7 +401,7 @@ main{position:relative;z-index:1}
           <p class="no mono">FN-NNN · CONTENTS</p>
           <h3 class="serif">ZeroAct</h3>
           <p class="desc">웹드라마 제작과 IP. Aiya에 먼저 올리고, Aiya 너머에도 판다. 사라진 제작 비용이 실제로 작품이 되고, 그 작품이 값을 받는가. 두 번째 레이블.</p>
-          <dl class="credits mono"><dt>발매</dt><dd>2027</dd><dt>역할</dt><dd>Contents · 드라마 · IP</dd><dt>상태</dt><dd class="gold">SOON</dd></dl>
+          <dl class="credits mono"><dt>발매</dt><dd>2026.12</dd><dt>역할</dt><dd>Contents · 드라마 · IP</dd><dt>상태</dt><dd class="gold">SOON</dd></dl>
         </div>
       </article>
     </div>
@@ -437,7 +442,7 @@ main{position:relative;z-index:1}
     <footer class="mono">
       <span style="display:flex;align-items:center;gap:8px"><svg viewBox="0 0 90 120" style="width:14px;height:19px" aria-hidden="true"><defs><clipPath id="ftf"><path d="M10 10h70v16h-52v26h44v16h-44v42h-18z"/></clipPath></defs><g clip-path="url(#ftf)"><circle cx="52" cy="62" r="4.0" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="52" cy="62" r="17.1" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="52" cy="62" r="30.3" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="52" cy="62" r="43.4" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="52" cy="62" r="56.6" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="52" cy="62" r="69.7" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/><circle cx="52" cy="62" r="82.9" fill="none" stroke="#B8975A" stroke-width="4" opacity="1.0"/><circle cx="52" cy="62" r="96.0" fill="none" stroke="#B8975A" stroke-width="4" opacity="0.5"/></g><path d="M10 10h70v16h-52v26h44v16h-44v42h-18z" fill="none" stroke="#B8975A" stroke-width="1.6"/></svg> © 2026 Fanaai, Inc. · Delaware</span>
       <span>1111B S Governors Ave, STE 87820, Dover, DE 19904</span>
-      <span style="display:flex;flex-wrap:wrap;gap:6px 16px"><a href="/legal.html#privacy-ko" style="color:inherit">개인정보처리방침</a><a href="/legal.html#terms-ko" style="color:inherit">이용약관</a><a href="/legal.html#support-ko" style="color:inherit">고객지원</a><a href="/legal.html#delete-ko" style="color:inherit">계정 삭제</a></span>
+      <span style="display:flex;flex-wrap:wrap;gap:6px 16px;flex-basis:100%"><a href="/legal.html#privacy-ko" style="color:inherit">개인정보처리방침</a><a href="/legal.html#terms-ko" style="color:inherit">이용약관</a><a href="/legal.html#support-ko" style="color:inherit">고객지원</a><a href="/legal.html#delete-ko" style="color:inherit">계정 삭제</a></span>
     </footer>
   </div>
 
