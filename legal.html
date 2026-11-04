@@ -800,12 +800,12 @@ support:`
 
 const DOC_KEYS=["privacy","terms","support","delete"];
 const LANG_ATTR={en:"en",ko:"ko",ja:"ja",zh:"zh-Hant"};
-const LN={"en":"EN","ko":"KO","ja":"JA","zh":"ZH"};const EYE={"en":"Aiya · Legal","ko":"Aiya · 정책","ja":"Aiya · ポリシー","zh":"Aiya · 政策"};
+const LN={"en":"EN","ko":"KO"}; /* JA·ZH 숨김: 다시 열려면 "ja":"JA","zh":"ZH" 추가 */const EYE={"en":"Aiya · Legal","ko":"Aiya · 정책","ja":"Aiya · ポリシー","zh":"Aiya · 政策"};
 const STATIC={privacy:"/privacy/",terms:"/terms/",support:"/support/","delete":"/delete-account/"};
 function esc(s){return s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
 function fill(h){return h.replace(/\{\{(\w+)\}\}/g,(m,k)=>{const v=CONFIG[k];if(v==null)return m;return v.startsWith("[")?'<span class="ph">'+esc(v)+'</span>':esc(v)})}
 function href(d,l){return l==="en"?STATIC[d]:"#"+d+"-"+l}
-function parse(){const m=(location.hash||"").slice(1).match(/^(privacy|terms|support|delete)-(en|ko|ja|zh)$/);if(m)return{doc:m[1],lang:m[2]};let l="en";try{const n=(navigator.language||"en").toLowerCase();if(n.startsWith("ko"))l="ko";else if(n.startsWith("ja"))l="ja";else if(n.startsWith("zh"))l="zh"}catch(e){}return{doc:"privacy",lang:l}}
+function parse(){const m=(location.hash||"").slice(1).match(/^(privacy|terms|support|delete)-(en|ko)$/);if(m)return{doc:m[1],lang:m[2]};let l="en";try{const n=(navigator.language||"en").toLowerCase();if(n.startsWith("ko"))l="ko";}catch(e){}return{doc:"privacy",lang:l}}
 function render(){const {doc,lang}=parse();if(lang==="en"&&location.hash){location.replace(STATIC[doc]);return}
 const ui=UI[lang];document.documentElement.lang=LANG_ATTR[lang];
 document.getElementById("home").href=lang==="ko"?"/kr/":"/";
