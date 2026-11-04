@@ -1,10 +1,127 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aiya · Fanaai</title>
-<script>
-var l=(navigator.language||"en").toLowerCase(),c="en";
-if(l.indexOf("ko")===0)c="ko";else if(l.indexOf("ja")===0)c="ja";else if(l.indexOf("zh")===0)c="zh";
-location.replace("/legal.html#terms-"+c);
-</script>
-<meta http-equiv="refresh" content="1; url=/legal.html#terms-en">
-</head><body><p><a href="/legal.html#terms-en">Continue</a></p></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aiya · Terms of Service</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&family=Hanken+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Noto+Sans+KR:wght@400;600;700&family=Noto+Sans+JP:wght@400;600;700&family=Noto+Sans+TC:wght@400;600;700&display=swap">
+<style>
+/* Layout: sticky header with doc tabs + language switch, single reading column ~68ch */
+:root{
+  color-scheme:dark; --bg:#15171A; --surface:#1C1F23; --fg:#F3EFE6; --muted:#B9B3A6; --line:rgba(243,239,230,.12); --accent:#B8975A; --accent-soft:rgba(184,151,90,.16); --ph-bg:#3d3214; --ph-fg:#ffd978;
+  --display:"Noto Serif KR", Georgia, serif;
+  --body:"Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+html:lang(ko) {--body:"Hanken Grotesk","Noto Sans KR",system-ui,sans-serif}
+html:lang(ja) {--body:"Hanken Grotesk","Noto Sans JP",system-ui,sans-serif}
+html:lang(zh-Hant) {--body:"Hanken Grotesk","Noto Sans TC",system-ui,sans-serif}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.7}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar,.wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;padding-block:12px}
+.mark{font-family:var(--display);font-size:30px;line-height:1;color:var(--accent);text-decoration:none;font-style:italic;letter-spacing:-.01em}
+nav{display:flex;flex-wrap:wrap;gap:4px;flex:1;min-width:0}
+nav a{font-size:14px;font-weight:500;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:999px;white-space:nowrap}
+nav a:hover{color:var(--fg);background:var(--surface)}
+nav a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
+select{font:inherit;font-size:14px;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 8px}
+a:focus-visible,select:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+main.wrap{padding-block:40px 80px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;font-weight:700;letter-spacing:-.015em;margin:0 0 8px;text-wrap:balance}
+.meta{color:var(--muted);font-size:14px;margin:0 0 28px;font-variant-numeric:tabular-nums}
+.lead{font-size:17px;max-width:68ch}
+h2{font-size:19px;font-weight:700;margin:40px 0 8px;padding-top:16px;border-top:1px solid var(--line);text-wrap:balance}
+h3{font-size:16px;font-weight:600;margin:20px 0 4px}
+p,ul,ol{max-width:68ch;margin:0 0 12px}
+ul,ol{padding-left:1.25em}
+li{margin:4px 0}
+li::marker{color:var(--accent)}
+a{color:var(--accent)}
+strong{font-weight:600}
+.ph{background:var(--ph-bg);color:var(--ph-fg);border-radius:4px;padding:0 4px;font-weight:600;white-space:nowrap}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:16px 0;max-width:68ch}
+.box p:last-child{margin-bottom:0}
+.contact{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.contact code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:15px;user-select:all;word-break:break-all}
+button.copy{font:inherit;font-size:13px;font-weight:600;color:var(--accent);background:transparent;border:1px solid var(--accent);border-radius:999px;padding:3px 12px;cursor:pointer}
+footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:56px;padding-top:16px}
+@media (prefers-reduced-motion:no-preference){nav a{transition:background .15s,color .15s}}
+</style>
+
+<style>*{box-sizing:border-box}html,body{margin:0}</style>
+<style>.langs{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:13px}.langs a{color:var(--muted);text-decoration:none}.langs a[aria-current]{color:var(--accent)}</style><link rel="canonical" href="https://fana.club/terms/"></head>
+<body>
+<header><div class="bar"><a class="mark" href="/" id="home">Fanaai</a><nav aria-label="Documents"><a href="/privacy/">Privacy Policy</a><a href="/terms/" aria-current="page">Terms of Service</a><a href="/support/">Support</a><a href="/delete-account/">Delete Account</a></nav><nav class="langs" aria-label="Language"><a href="/terms/" hreflang="en" aria-current="true">English</a><a href="/legal.html#terms-ko" hreflang="ko">한국어</a><a href="/legal.html#terms-ja" hreflang="ja">日本語</a><a href="/legal.html#terms-zh" hreflang="zh-Hant">繁體中文</a></nav></div></header>
+<main class="wrap"><h1>Terms of Service</h1><p class="meta">Effective: 2026-10-30</p>
+<p class="lead">These Terms of Service ("Terms") are an agreement between you and Fanaai, Inc. ("Fanaai", "we", "us"). They govern your use of the Aiya app and related websites (the "Service"). By creating an account or using the Service, you agree to these Terms and our <a href="/privacy/">Privacy Policy</a>.</p>
+<h2>1. Eligibility and accounts</h2>
+<ul>
+<li>You must be at least 13 years old (14 in Korea). If you are under the age of majority where you live, you may use the Service only with the permission of a parent or guardian, who is responsible for your purchases.</li>
+<li>You sign in with a Google or Apple account. You are responsible for activity on your account and for keeping your sign-in secure.</li>
+<li>Each account is for one person. Do not sell, share or transfer your account.</li>
+</ul>
+<h2>2. The Service</h2>
+<p>Aiya streams short serialized dramas. Many series are made in whole or in part with artificial intelligence tools. All characters and events are fictional, and any resemblance to real people is coincidental. We may add, change or remove series and features at any time. Content may become unavailable when a license ends or a creator removes it.</p>
+<h2>3. Coins and purchases</h2>
+<ul>
+<li><strong>What coins are.</strong> Coins are a virtual item used to unlock episodes. You buy them through the Apple App Store or Google Play, and that store's payment terms also apply. Prices are set in U.S. dollars. The store may show local currency and taxes.</li>
+<li><strong>A license, not money.</strong> Coins are a limited license to use features of the Service. They are not property, money or a deposit. They have no cash value and cannot be exchanged for cash, transferred, sold or used outside the Service.</li>
+<li><strong>Expiration.</strong> Coins you purchase do not expire. Free bonus or promotional coins may expire. Their expiry date is shown when you receive them. Free coins are used before purchased coins unless the app says otherwise.</li>
+<li><strong>Unlocked episodes.</strong> An unlocked episode stays available to your account for as long as that episode is offered on the Service.</li>
+<li><strong>Refunds.</strong> Purchases are final, except as required by law or by the store's policy. Refund requests are handled by Apple (reportaproblem.apple.com) or Google Play. If a refund is granted, we may remove the related coins from your balance.</li>
+<li><strong>Your legal rights.</strong> Nothing in these Terms limits rights you have under consumer protection law where you live, including any right to cancel unused purchased coins.</li>
+<li><strong>Subscriptions.</strong> If we offer a subscription, its price, billing period and auto-renewal terms will be shown before you buy. You can cancel at any time in your App Store or Google Play settings.</li>
+</ul>
+<h2>4. Rules of conduct</h2>
+<p>You agree not to:</p>
+<ul>
+<li>copy, download, record, redistribute or publicly show content from the Service</li>
+<li>scrape, reverse engineer or interfere with the Service or its security</li>
+<li>exploit bugs or use unauthorized methods to get coins or content</li>
+<li>post content that is illegal, hateful, harassing, sexually explicit, or that infringes others' rights</li>
+<li>impersonate any person or misrepresent your affiliation</li>
+</ul>
+<h2>5. Creator content</h2>
+<ul>
+<li>If you upload content as a creator, you keep ownership of it.</li>
+<li>You give us a worldwide, non-exclusive, royalty-free license to host, stream, translate, subtitle and promote your content in the Service and in our marketing, while it is on the Service and for a reasonable time after removal.</li>
+<li>You confirm that you hold all rights needed for your content, including rights to AI tool outputs, voices, likenesses, music and other materials.</li>
+<li>You may not upload sexually explicit content, content that sexualizes minors, depictions of real people without their consent, hateful or illegal content.</li>
+<li>Revenue sharing and payouts are governed by a separate Creator Agreement. For creator matters, the Creator Agreement controls if it conflicts with these Terms.</li>
+</ul>
+<h2>6. Reports, moderation and copyright</h2>
+<p>You can report content in the app or by emailing master@fana.club. We may review, restrict or remove content and suspend accounts that violate these Terms.</p>
+<p>If you believe content on the Service infringes your copyright, send a notice to master@fana.club that includes: your contact information; a description of the work; the location of the infringing content; a statement of good-faith belief that the use is not authorized; a statement, under penalty of perjury, that your notice is accurate and that you are the owner or authorized to act for the owner; and your physical or electronic signature. We terminate the accounts of repeat infringers.</p>
+<h2>7. Our intellectual property</h2>
+<p>The Service, including its software, design and trademarks, belongs to us or our licensors. We give you a personal, non-commercial, non-transferable and revocable license to use the app on devices you own or control and to stream content for your personal viewing.</p>
+<h2>8. Suspension and termination</h2>
+<p>You may stop using the Service and delete your account at any time. We may suspend or end your access if you violate these Terms, if the law requires it, or if we discontinue the Service. If we discontinue the Service entirely, we will give at least 30 days' notice in the app and handle remaining purchased coins as the law requires. If your account is terminated for violating these Terms, remaining coins are forfeited to the extent the law allows.</p>
+<h2>9. Disclaimers</h2>
+<p>The Service is provided "as is" and "as available". To the extent permitted by law, we disclaim all warranties, express or implied, including merchantability, fitness for a particular purpose and non-infringement. We do not guarantee that the Service will be uninterrupted or error-free.</p>
+<h2>10. Limitation of liability</h2>
+<p>To the extent permitted by law, we are not liable for indirect, incidental, special, consequential or punitive damages, or for lost profits or data. Our total liability for any claim relating to the Service is limited to the greater of the amount you paid us in the 12 months before the claim or USD 100. These limits do not apply to liability that cannot be limited under applicable law.</p>
+<h2>11. Indemnity</h2>
+<p>To the extent permitted by law, you agree to indemnify us against claims arising from content you upload or your violation of these Terms.</p>
+<h2>12. Governing law and disputes</h2>
+<p>These Terms are governed by the laws of the State of Delaware, USA, without regard to conflict-of-law rules. Courts located in Delaware have jurisdiction. If you are a consumer living outside the United States, you also keep the protection of mandatory laws of your country and may bring a claim in your local courts where the law allows. Before filing a claim, please contact us at master@fana.club so we can try to resolve it informally within 30 days.</p>
+<h2>13. Additional terms for Apple devices</h2>
+<ul>
+<li>These Terms are between you and us, not Apple. Apple is not responsible for the Service or its content.</li>
+<li>Apple has no obligation to provide maintenance or support for the app.</li>
+<li>If the app fails to conform to an applicable warranty, you may notify Apple, and Apple may refund the purchase price of the app (if any). Apple has no other warranty obligation for the app.</li>
+<li>Apple is not responsible for any claims relating to the app, including product liability, legal or regulatory compliance, consumer protection or intellectual property claims.</li>
+<li>You confirm that you are not located in a country subject to a U.S. Government embargo and are not on any U.S. Government list of prohibited or restricted parties.</li>
+<li>Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you.</li>
+</ul>
+<p>If you use the app on Android, Google Play's terms also apply.</p>
+<h2>14. Changes to these Terms</h2>
+<p>We may update these Terms. We will notify you in the app at least 7 days before changes take effect, or 30 days before changes that reduce your rights. If you continue to use the Service after that date, you accept the updated Terms.</p>
+<h2>15. Language</h2>
+<p>We provide translations of these Terms for convenience. If there is a conflict, the English version controls to the extent permitted by law.</p>
+<h2>16. Contact</h2>
+<p>Fanaai, Inc.<br>1111B S Governors Ave Ste 87820, Dover, DE 19904, USA<br>master@fana.club</p><footer>Aiya is operated by Fanaai, Inc. Translations are provided for convenience; the English version controls to the extent permitted by law.</footer></main>
+</body>
+</html>
